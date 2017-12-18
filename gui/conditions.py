@@ -31,12 +31,11 @@ def run(condition):
     ## Instruction screen
     showInstructions(mywin, condition, 3)
 
-
     ### Run 3
     doTask(mywin, 3, condition)
     wait(mywin, 3)
 
-    finish_text = "End"
+    finish_text = "END"
     finish = visual.TextStim(mywin, text=finish_text, color=(255,255,255),
                                            colorSpace='rgb255', pos=(0,0),
                                            height=0.075)
@@ -83,7 +82,7 @@ def doTask(mywin, runNum, condition):
         go.draw()
         trial.draw()
         mywin.flip()
-        core.wait(8)
+        core.wait(5)
 
         if event.getKeys():
             continuing = False
@@ -91,7 +90,7 @@ def doTask(mywin, runNum, condition):
         stop.draw()
         trial.draw()
         mywin.flip()
-        core.wait(5)
+        core.wait(3)
 
 def wait(mywin, t):
     waitText = "+"
@@ -104,13 +103,13 @@ def wait(mywin, t):
     core.wait(t)
 
 def showInstructions(mywin, condition, interval):
-    i1_8 = "FIRST SET OF INSTRUCTIONS FOR 8TRIAL CONDITION"
-    i2_8 = "SECOND SET OF INSTRUCTIONS FOR 8TRIAL CONDITION"
-    i3_8 = "THIRD SET OF INSTRUCTIONS FOR 8TRIAL CONDTION"
+    i1_8 = "Thank you for agreeing to participate today. You will be asked to complete a series of tasks. The instructions on the screen will guide you through the process. Please pay close attention and try as hard as you can. \n\nThe first task is a grip strength task. Each time the screen says go, please grip the force meter as hard as you can and hold it for a few seconds (until the screen says STOP)."
+    i2_8 = "Reminder: each time the screen says go, please grip the force meter as hard as you can and hold it for a few seconds (until the screen says STOP)."
+    i3_8 = "Reminder: each time the screen says go, please grip the force meter as hard as you can and hold it for a few seconds (until the screen says STOP)."
 
-    i1_1 = "FIRST SET OF INSTRUCTIONS FOR 1TRIAL CONDITION"
-    i2_1 = "SECOND SET OF INSTRUCTIONS FOR 1TRIAL CONDITION"
-    i3_1 = "THIRD SET OF INSTRUCTIONS FOR 1TRIAL CONDTION"
+    i1_1 = "Thank you for agreeing to participate today. You will be asked to complete a series of tasks. The instructions on the screen will guide you through the process. Please pay close attention and try as hard as you can. \n\nThe first task is a grip strength task. Each time the screen says go, please grip the force meter as hard as you can and hold it for a few seconds (until the screen says STOP)."
+    i2_1 = "The next task is also a grip strength task. \n\nReminder: each time the screen says go, please grip the force meter as hard as you can and hold it for a few seconds (until the screen says STOP)."
+    i3_1 = "The next task is also a grip strength task. \n\nReminder: each time the screen says go, please grip the force meter as hard as you can and hold it for a few seconds (until the screen says STOP)."
 
     if condition == 1:
         if interval == 1: instructions = i1_8
