@@ -12,7 +12,7 @@ def run(condition):
     ###
 
     #create a window
-    mywin = visual.Window([1000,750], color=(0,0,0), colorSpace='rgb255', monitor="testMonitor")
+    mywin = visual.Window([1000,750], color=(0,0,0), colorSpace='rgb255')
 
     ### Instruction screen
     showInstructions(mywin, condition, 1)
